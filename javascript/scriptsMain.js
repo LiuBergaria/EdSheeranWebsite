@@ -1,18 +1,21 @@
 var iFrameContainer = document.getElementById("iFrameContainer");
+var topMenu = document.getElementById("toTopMenu");
 
 function closeIFrame() {
 	iFrameContainer.style.display = "none";
+	topMenu.style.display = "initial";
 }
 
 function openIFrame(site) {
 	iFrameContainer.style.display = "flex";
+	topMenu.style.display = "none";
 }
 
 /* Adiciona o evento para quando scrollar a página */
 document.addEventListener("scroll", function() {
 	if (window.pageYOffset > 200) {
-		document.getElementById('toTopMenu').classList.remove("fade-out");
+		topMenu.classList.remove("fade-out");
 	} else {
-		document.getElementById('toTopMenu').classList.add("fade-out");
+		topMenu.classList.add("fade-out");
 	}
 });
