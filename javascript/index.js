@@ -5,14 +5,15 @@ var imgTelaCheia = telaCheia.querySelector("img");
 var linkTelaCheia = telaCheia.querySelector("a");
 var topMenu = document.getElementById("toTopMenu");
 
-function aumentarImgInsta(numImg) {
-	telaCheia.style.display = "flex";
+function aumentarImgInsta(numImg) {	
 	imgTelaCheia.src = "imgs/instagram/insta-ed"+ numImg +".jpg"
 	linkTelaCheia.href = fotosInsta[numImg-1].dataset.link;
-	topMenu.style.display = "none";
-}
-
-function fecharImgInsta() {
-	telaCheia.style.display = "none";
-	topMenu.style.display = "initial";
+	topMenu.classList.add("displayNone");
+	telaCheia.classList.remove("displayNone");
+	telaCheia.addEventListener('click', function(e) {
+		if (e.target.id == "imageOverPage" || e.target.id == "closeImageOverPage") {
+			telaCheia.classList.add("displayNone");
+			topMenu.classList.remove("displayNone");
+		}
+	});
 }

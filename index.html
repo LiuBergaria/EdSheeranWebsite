@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<!-- Reset de CSS -->
 	<link rel="stylesheet" type="text/css" href="css/reset.css"> 
+	<!-- CSS de ícones do Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<!-- CSS comum de todo o site -->
 	<link rel="stylesheet" type="text/css" href="css/styleMain.css">
 	<!-- CSS específico dessa página -->
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<!-- CSS de ícones do Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<!-- Ícone da Página -->
 	<link rel="shortcut icon" href="imgs/paw.ico" />
 </head>
@@ -273,19 +273,19 @@
 	</footer>
 
 	<!-- iFrame utilizado pelos botões do rodapé -->
-	<div id="iFrameContainer">
+	<div id="iFrameContainer" class="displayFlex displayNone">
 		<iframe id="iframeBox" name="iframeBox"></iframe>
-		<p id="btnFechar" onclick="closeIFrame()">X</p>
+		<p id="btnFechar" class="fas fa-times-circle"></p>
 	</div>
 
 	<!-- Div usada para mostrar fotos em tela cheia -->
-	<div id="imageOverPage" style="display: none;">
+	<div id="imageOverPage" class="displayFlex displayNone">
 		<a target="_blank"><img></a>
-		<button onclick="fecharImgInsta()" id="closeImageOverPage">X</button>
+		<p id="closeImageOverPage" class="fas fa-times-circle"></p>
 	</div>
 
 	<!-- Botão para retorno ao menu da página -->
-	<a id="toTopMenu" class="fas fa-bars fade-out" href="#"></a>
+	<a id="toTopMenu" class="fas fa-bars displayNone" href="#"></a>
 
 	<script type="text/javascript" src="javascript/scriptsMain.js">	
 	</script>
